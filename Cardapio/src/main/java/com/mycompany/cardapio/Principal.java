@@ -96,7 +96,8 @@ public class Principal {
 //sistema de busca de produto com estrutura de condicional if para margem de erro de nao achar o produto digitado
     private static void buscarProduto(Scanner scanner) {
         System.out.print("Digite o nome do produto: ");
-        String nome = scanner.nextLine();
+        String nomeDigitado = scanner.nextLine();
+        String nome = nomeDigitado.toLowerCase();
 
         for (Produto produto : produtos) {
             if (produto.getNome().equalsIgnoreCase(nome)) {
